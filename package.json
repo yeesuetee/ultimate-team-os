@@ -7,8 +7,9 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node --experimental-strip-types src/domain.test.ts",
-    "deploy:pages": "npm run build && node scripts/deploy-pages.mjs"
+    "test": "node --experimental-strip-types src/domain.test.ts && node --experimental-strip-types src/stats.test.ts",
+    "deploy:pages": "npm run build && node scripts/deploy-pages.mjs",
+    "deploy:solo": "npm run build && node scripts/deploy-pages.mjs --preview solo-coach"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

@@ -48,8 +48,9 @@ import {
   totalMinutes,
 } from "./domain";
 import "./style.css";
+import SoloCoach from "./SoloCoach";
 const nav = [
-  ["/", "Overview", LayoutDashboard],
+  ["/", "Solo coach", LayoutDashboard],
   ["/planner", "Training planner", CalendarDays],
   ["/live", "Live coaching", Radio],
   ["/playbook", "Playbook", BookOpen],
@@ -371,7 +372,8 @@ function App() {
             </>
           ) : (
             <>
-              {path === "/" && (
+              {path === "/" && <SoloCoach players={state.players} go={go} />}
+              {path === "/overview" && (
                 <>
                   <PageHeading
                     eyebrow="YOUR TEAM. YOUR NEXT CHAPTER."
@@ -1771,7 +1773,7 @@ function App() {
                   </div>
                 </>
               )}
-              {!nav.some((n) => n[0] === path) && (
+              {!nav.some((n) => n[0] === path) && path !== "/overview" && (
                 <Empty text="This page doesn’t exist. Use the navigation to return to your workspace." />
               )}
             </>

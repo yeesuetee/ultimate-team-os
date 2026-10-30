@@ -44,3 +44,17 @@ Recommendation rules use focus frequency, recency and review tags; charts are il
 - `src/domain.test.ts`: domain acceptance checks using the Node test runner.
 
 The supplied specification was used as product context. No backend or real AI integration is included.
+
+## Solo coach experiment
+
+Branch: `feature/solo-coach-stats`. The home screen focuses on one-person sideline capture. Start an empty session, record team-level goals and turnovers with one tap, undo the last tap, and optionally reveal passes/blocks or tag a player. Finish to get transparent counts, logged-pass completion with its denominator, one rules-based next step, and a CSV export. Finished logs remain available and can be resumed. Example data is opt-in and read-only. Logs persist only on this browser/device, separately from the original training demo. Clearing browser storage removes them.
+
+The existing training dashboard remains accessible through **Training workspace**. Capture does not pretend to measure complete match performance: missed events and selective capture affect the summary.
+
+To publish this branch later without replacing the existing Pages homepage, run:
+
+```sh
+npm run deploy:solo
+```
+
+This writes only `previews/solo-coach/` on `gh-pages`, preserving the root site and other previews. After Pages publishes, its URL is `https://yeesuetee.github.io/ultimate-team-os/previews/solo-coach/`. The deploy script preserves `previews/` during future root deployments too. Publication is separate from pushing the source branch.
