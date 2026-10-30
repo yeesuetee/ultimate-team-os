@@ -49,6 +49,7 @@ import {
 } from "./domain";
 import "./style.css";
 import SoloCoach from "./SoloCoach";
+import "./theme.css";
 const nav = [
   ["/", "Solo coach", LayoutDashboard],
   ["/planner", "Training planner", CalendarDays],
@@ -251,11 +252,13 @@ function App() {
             go("/");
           }}
         >
-          <span className="brand-icon">
-            <Compass size={27} />
-          </span>
-          <span>
-            ULTIMATE<span className="brand-sub">TEAM OS</span>
+          <span className="impact-brand">
+            <span className="impact-wordmark">
+              <img src="./impact-logo.png" alt="IMPACT" />
+            </span>
+            <span className="impact-product">
+              ULTIMATE TEAM OS <span>COACH ASSISTANT</span>
+            </span>
           </span>
         </a>
         <div className="team">
@@ -310,6 +313,17 @@ function App() {
       </aside>
       <div className="workspace">
         <header>
+          <a
+            className="mobile-impact"
+            href="#/"
+            aria-label="IMPACT Ultimate Team OS home"
+            onClick={(e) => {
+              e.preventDefault();
+              go("/");
+            }}
+          >
+            <img src="./impact-logo.png" alt="IMPACT" />
+          </a>
           <div className="crumb">
             Workspace <ChevronRight size={14} />
             <strong>{title}</strong>

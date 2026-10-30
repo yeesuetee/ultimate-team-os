@@ -58,3 +58,7 @@ npm run deploy:solo
 ```
 
 This writes only `previews/solo-coach/` on `gh-pages`, preserving the root site and other previews. After Pages publishes, its URL is `https://yeesuetee.github.io/ultimate-team-os/previews/solo-coach/`. The deploy script preserves `previews/` during future root deployments too. Publication is separate from pushing the source branch.
+
+### IMPACT visual theme
+
+The solo-coach branch uses `#6a0b0b` for primary actions and branding, paired with warm ivory surfaces, stone text and restrained bronze accents. Amber remains reserved for warnings. `src/theme.css` contains the shared brand overrides. `public/impact-logo.png` is a web adaptation of the supplied IMPACT wordmark and flying-disc motif, used in the desktop sidebar and mobile header. Ultimate Team OS wording and the fictional Northstar demo roster remain in place.

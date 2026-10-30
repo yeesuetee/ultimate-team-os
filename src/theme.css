@@ -1,0 +1,372 @@
+:root {
+  --brand: #6a0b0b;
+  --brand-hover: #510909;
+  --brand-tint: #f4eae8;
+  --ink: #332b2a;
+  --muted: #7a6f6b;
+  --surface: #fffdfb;
+  --page: #f7f4ef;
+  --border: #e8e0d9;
+  color: var(--ink);
+  background: var(--page);
+}
+.sidebar,
+header,
+.mobile-nav {
+  background: #fcfaf7;
+}
+.card {
+  background: var(--surface);
+  border-color: var(--border);
+}
+.primary,
+.stat-ourGoal {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fffaf4;
+}
+.primary:hover,
+.stat-ourGoal:active:not(:disabled) {
+  background: var(--brand-hover);
+}
+.primary {
+  box-shadow: 0 2px 5px #6a0b0b0b;
+}
+.outline {
+  border-color: #ded3ca;
+  background: var(--surface);
+  color: #6c514b;
+}
+.text-link {
+  color: #78423b;
+}
+.icon-button {
+  color: #87716a;
+}
+.button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline-color: #ab7770;
+}
+.sidebar nav a.active {
+  background: #f0e6e2;
+  color: var(--brand);
+}
+.sidebar nav a.active:before {
+  background: var(--brand);
+}
+.mobile-nav .active {
+  color: var(--brand);
+}
+.mobile-nav .active svg {
+  background: #f1e5e0;
+  box-shadow: 0 0 0 5px #f1e5e0;
+}
+.brand {
+  margin: 0 0 28px;
+  display: block;
+}
+.impact-brand {
+  display: block;
+  width: 100%;
+}
+.impact-wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand);
+  border-radius: 7px;
+  padding: 13px 11px;
+  min-height: 67px;
+}
+.impact-wordmark img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 66px;
+  object-fit: contain;
+}
+.impact-product {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2.2px;
+  font-weight: 750;
+  color: #4d3631;
+  margin: 14px 0 0 3px;
+  line-height: 1.4;
+}
+.impact-product > span {
+  display: block;
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #a08b80;
+  margin-top: 5px;
+}
+.mobile-impact {
+  display: none;
+}
+.solo-heading h1 {
+  color: #382b28;
+}
+.solo-heading h1 > span {
+  color: #967c73;
+}
+.solo-intro {
+  background: #eee9df;
+  border-color: #e4dacd;
+}
+.solo-intro-icon {
+  background: #e3d9cb;
+  color: #826b56;
+}
+.solo-intro strong {
+  color: #57453b;
+}
+.solo-intro p {
+  color: #8a786b;
+}
+.solo-label {
+  color: #9b8879;
+}
+.solo-tabs {
+  background: #ece5de;
+  border-color: #e5ddd4;
+}
+.solo-tabs button {
+  color: #927d72;
+}
+.solo-tabs .selected {
+  background: #fffdfb;
+  color: var(--brand);
+}
+.capture-card-head h2,
+.capture-side h2 {
+  color: #49352f;
+}
+.capture-score strong {
+  color: #4c3430;
+}
+.capture-score > span:not(.score-caption) {
+  color: #d4c3b5;
+}
+.stat-ourGoal .stat-symbol,
+.stat-ourGoal .stat-count {
+  color: #dec2aa;
+}
+.stat-ourGoal small {
+  color: #dbc0b4;
+}
+.stat-theirGoal {
+  background: #f2eee7;
+  border-color: #e2d9cc;
+}
+.stat-pass,
+.stat-block {
+  background: #f8f4ee;
+  border-color: #e9dfd3;
+}
+.stat-throwaway,
+.stat-drop {
+  background: #fcfaf6;
+  border-color: #e9e1d6;
+}
+.stat-button:not(.stat-ourGoal) strong {
+  color: #58443c;
+}
+.stat-button:not(.stat-ourGoal) .stat-symbol,
+.stat-button:not(.stat-ourGoal) .stat-count {
+  color: #aa9680;
+}
+.stat-button:not(.stat-ourGoal):active:not(:disabled) {
+  background: #eee2d8;
+}
+.stat-button small {
+  color: #8d7b6c;
+}
+.capture-dot.on {
+  background: #839074;
+  box-shadow: 0 0 0 4px #e7e9df;
+}
+.online,
+.demo-pill > span {
+  background: #879078;
+}
+.simple-toggle input,
+.check-label input {
+  accent-color: var(--brand);
+}
+.next-step {
+  background: #eee9df;
+  border-color: #e3d8ca;
+}
+.next-step-icon {
+  border-color: #dacabb;
+  color: #8b6a55;
+}
+.next-step > .tag {
+  background: #e6dfd2;
+  color: #8d7962;
+}
+.next-step > p {
+  color: #867360;
+}
+.next-step h2 {
+  color: #563f34;
+}
+.summary-metrics strong {
+  color: #693c33;
+}
+.summary-metrics span {
+  color: #856b5e;
+}
+.loss-row i {
+  background: #baa183;
+}
+.solo-toast,
+.toast {
+  background: #4f3a33;
+  border-color: #70514a;
+}
+.team-logo {
+  border-color: #d8c6b7;
+  color: #87594d;
+}
+.hero {
+  background: #512326;
+}
+.hero-status {
+  color: #e8cfc0;
+  border-color: #936566;
+}
+.hero .eyebrow,
+.hero p,
+.hero-meta span {
+  color: #d4b5a7;
+}
+.hero .light {
+  background: #efe5d4;
+  color: #604037;
+}
+.coaching-cue {
+  background: #f3eee5;
+  border-color: #e6dccd;
+}
+.tag {
+  background: #f0ebe3;
+  color: #8b7667;
+}
+.timer {
+  color: var(--brand);
+}
+.timer.running {
+  color: #81463a;
+}
+.timer span {
+  color: #d1b6aa;
+}
+.field-lines {
+  border-color: #9b6e62;
+}
+.field-lines svg {
+  stroke: #d8b99a;
+}
+.endzone.top,
+.endzone.bottom {
+  border-color: #9b6e62;
+}
+.field-circle {
+  border-color: #9b6e62;
+}
+.player-dot {
+  background: #d8b99a;
+  box-shadow: 0 0 0 5px #d8b99a14;
+}
+.player-dot.d4 {
+  background: #b57f6b;
+}
+@media (max-width: 850px) {
+  .impact-wordmark {
+    padding: 11px 8px;
+    min-height: 56px;
+  }
+  .impact-product {
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+}
+@media (max-width: 650px) {
+  .mobile-impact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 91px;
+    height: 35px;
+    background: var(--brand);
+    border-radius: 4px;
+    padding: 7px;
+  }
+  .mobile-impact img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 26px;
+    object-fit: contain;
+  }
+  header {
+    gap: 12px;
+  }
+  .crumb {
+    margin-right: auto;
+  }
+  .crumb > svg,
+  .crumb > strong {
+    display: none;
+  }
+  .crumb {
+    font-size: 0;
+  }
+  .header-actions .avatar {
+    display: none;
+  }
+  .header-actions {
+    margin-left: auto;
+  }
+  .header-actions .view-button {
+    font-size: 9px;
+  }
+  .solo-heading h1 > span {
+    color: #967c73;
+  }
+  .mobile-nav {
+    background: #fcfaf7f5;
+  }
+}
+.stat-ourGoal small {
+  color: #dbc0b4;
+}
+.impact-wordmark {
+  padding: 0;
+  overflow: hidden;
+}
+.impact-wordmark img {
+  max-height: none;
+}
+@media (max-width: 850px) {
+  .impact-wordmark {
+    padding: 0;
+  }
+}
+@media (max-width: 650px) {
+  .mobile-impact {
+    padding: 0;
+    overflow: hidden;
+  }
+  .mobile-impact img {
+    max-height: none;
+  }
+}
