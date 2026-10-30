@@ -59,7 +59,7 @@ const nav = [
 const uid = () => crypto.randomUUID();
 function App() {
   const [state, setState] = useState(demoRepository.load);
-  const [path, setPath] = useState(location.pathname);
+  const [path, setPath] = useState(location.hash.slice(1) || "/");
   const [notice, setNotice] = useState("");
   const [storageError, setStorageError] = useState(false);
   const [detail, setDetail] = useState<Drill | Player | null>(null);
@@ -99,7 +99,7 @@ function App() {
   const [reviewFocus, setReviewFocus] = useState<string[]>(["Handler resets"]);
   const [summary, setSummary] = useState("");
   const go = (p: string) => {
-    history.pushState({}, "", p);
+    history.pushState({}, "", `#${p}`);
     setPath(p);
     setQuery("");
     setFilter("all");
@@ -108,12 +108,16 @@ function App() {
   };
   useEffect(() => {
     const fn = () => {
-      setPath(location.pathname);
+      setPath(location.hash.slice(1) || "/");
       setQuery("");
       setFilter("all");
     };
     window.addEventListener("popstate", fn);
-    return () => window.removeEventListener("popstate", fn);
+    window.addEventListener("hashchange", fn);
+    return () => {
+      window.removeEventListener("popstate", fn);
+      window.removeEventListener("hashchange", fn);
+    };
   }, []);
   useEffect(() => {
     try {
@@ -239,7 +243,7 @@ function App() {
     <div className="app">
       <aside className="sidebar">
         <a
-          href="/"
+          href="#/"
           className="brand"
           onClick={(e) => {
             e.preventDefault();
@@ -267,7 +271,7 @@ function App() {
           {nav.map(([p, label, Icon]) => (
             <a
               key={p}
-              href={p}
+              href={`#${p}`}
               className={path === p ? "active" : ""}
               onClick={(e) => {
                 e.preventDefault();
@@ -1778,7 +1782,7 @@ function App() {
         {nav.map(([p, label, Icon]) => (
           <a
             key={p}
-            href={p}
+            href={`#${p}`}
             aria-label={label}
             className={path === p ? "active" : ""}
             onClick={(e) => {

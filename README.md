@@ -19,7 +19,13 @@ npm run build
 npm run preview
 ```
 
-Deploy `dist` as a static site. `public/_redirects` supplies a Cloudflare Pages / Netlify SPA fallback. Other hosts must rewrite application routes to `index.html`.
+Deploy `dist` as a static site. Relative asset paths and hash-based routes (for example, `/#/planner`) support GitHub Pages project subdirectories and direct refresh without server rewrites.
+
+### GitHub Pages
+
+Run `npm run deploy:pages` from the repository with GitHub push access. This builds the app and commits the generated files to `gh-pages`, preserving its history and rejecting concurrent updates. It uses the repository’s configured Git author. It does not enable Pages settings.
+
+In GitHub → Settings → Pages, select **Deploy from a branch**, then **gh-pages** and **/ (root)**, and save. Once GitHub finishes publishing, the preview is at `https://yeesuetee.github.io/ultimate-team-os/`. Repeat the deploy command after future source changes. Pages availability for a private repository depends on the repository’s GitHub plan and organization policy.
 
 ## Demo lifecycle
 
